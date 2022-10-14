@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="vinilo, personalizado, sublimado, estampado, remera, taza, gorra, vaso, rock, malvinas" />
+  <meta name="description"
+    content="KPREM Arte Gráfico es un emprendimiento de productos personalizados, mediante técnicas de estampación, como la sublimación, serigrafía y vinilos" />
+  <meta name="author" content="Emanuel Escudero" />
+  <meta name="copyright" content="KPREM Arte Gráfico" />
+  <meta name="robots" content="index" />
+  <!-- FAV ICON -->
+  <link rel="icon" href="assets/icon/ico.png" />
+  <!-- TITLE -->
+  <title>KPREM Arte Gráfico</title>
+
+  <!-- FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/0752328cab.js" crossorigin="anonymous"></script>
+
+  <!-- CSS STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- JS SCRIPT -->
+  <script src="js/script.js" defer></script>
+  <script src="js/popups.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <!-- AOS ANIMATION -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- ANIMATE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="body">
+
+  <div class="tabContainer active animate__animated animate__fadeInUp animate__slow" id="tabContainer">
+
+    <div class="tab">
+      <div class="headerTab">
+        <a href="#" class="btnCloseTab" id="btnCloseTab">
+          <i class="fa-solid fa-xmark icoClose" id="icoCloseTab"></i>
+        </a>
+        <ul class="options">
+          <li class="option optionActive" id="option1">Registrarse</li>
+          <li class="option " id="option2">Ingresar</li>
+        </ul>
+      </div>
+
+      <div class="contents">
+        <div class="content contentActive" id="content1">
+
+          <!-- FORMULARIO REGISTRARSE-->
+          <form class="form" id="form">
+            <!-- NAME -->
+            <div class="divForm name">
+              <label for="nameInput" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu Nombre" required />
+            </div>
+
+            <!-- LASTNAME -->
+            <div class="divForm lastname">
+              <label for="lastnameInput" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="lastnameInput" placeholder="Ingresa tu Apellido" required />
+            </div>
+
+            <!-- EMAIL -->
+            <div class="divForm email">
+              <label for="emailInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                placeholder="usuario@email.com" required />
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="divForm password">
+              <label for="passInput" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="passInput" placeholder="Elije tu Contraseña" required />
+            </div>
+
+            <!-- CEL -->
+            <div class="divForm cel">
+              <label for="celInput" class="form-label">Celular</label>
+              <input type="text" class="form-control" id="celInput" aria-describedby="emailHelp"
+                placeholder="542613456789" required />
+            </div>
+
+            <!-- TERMS -->
+            <div class="divForm terms">
+              <input class="checkInput" type="checkbox" id="flexSwitchCheckDefault" required />
+              <label class="form-check-label" id="termsConditions" for="flexSwitchCheckDefault">
+                Acepto los <br>
+                <a href="#" target="_blank" class="termsConditions">
+                  <em>Términos y Condiciones</em>
+                </a>
+              </label>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="divForm submit">
+              <button type="submit" class="btnSubmit" id="btnSubmit">Registrarme</button>
+            </div>
+
+            <!-- ALERTS -->
+            <div class="divForm alert">
+              <p class="alertRegister" id="alertRegister"></p>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="content" id="content2">
+          <!-- FORMULARIO LOGIN-->
+          <form class="form">
+
+
+            <!-- EMAIL -->
+            <div class="divForm emailLogin">
+              <label for="emailInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailInputLogin" aria-describedby="emailHelp"
+                placeholder="usuario@email.com" required />
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="divForm passwordLogin">
+              <label for="passInput" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="passInputLogin" placeholder="Ingresa tu Contraseña"
+                required />
+            </div>
+
+
+
+            <!-- SUBMIT -->
+            <div class="divForm submitLogin">
+              <button type="submit" class="btnSubmitLogin" id="btnSubmitLogin">Entrar</button>
+            </div>
+            <div>
+              <p id="alertLogin"></p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="headerContainer">
+
+      <!-- LOGO -->
+      <h1 class="h1">
+        <img class="headerLogo" data-aos="fade-right" data-aos-duration="1500" src="assets/img/logo2022.png"
+          alt="logo de KPREM Arte Gráfico" />
+      </h1>
+
+      <!-- MENU -->
+      <section class="headerMenu" data-aos="fade-left" data-aos-duration="1500">
+        <nav class="navBar">
+          <a class="linkMenu" href="index.html">
+            <img class="headerIcon" src="assets/icon/home.png"
+              alt="Imagen de home, con de acceso a la página principal" />
+          </a>
+          <a class="linkMenu" href="pages/carrito.html">
+            <img class="headerIcon" src="assets/icon/carrito.png"
+              alt="Imagen de carrito, con acceso al Carrito de Compras" />
+          </a>
+        </nav>
+      </section>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section class="containerMain" data-aos="fade-up" data-aos-duration="3000">
+
+      <!-- TEXT INTRO -->
+      <section class="mainText">
+        <p>
+          En <em class="emBold">KPREM Arte Gráfico</em> nos dedicamos a la personalización de diferentes productos,
+          mediante
+          técnicas de estampación, como lo son la sublimación, serigrafía y
+          vinilo.
+        </p>
+        <p>
+          Te invitamos a conocer nuestra tienda y elegir el producto que
+          gustes, con el diseño que siempre quisiste!
+        </p>
+      </section>
+
+      <!-- PRODUCTOS -->
+      <section class="mainProductos">
+
+        <!-- REMERA GUNS -->
+        <div class="productosCard" id="remeGnr">
+          <a class="cardItems" href="#">
+            <img class="productoItem remera" src="assets/productos/remera/guns.png"
+              alt="Imagen de remera personalizada">
+            <h2 class="h2">Reme GN´R</h2>
+          </a>
+          <!-- REMERA GUNS // POP UP -->
+          <div class="overlay overlayGuns" id="overlay">
+            <div class="popup popupGuns" id="popup">
+              <a href="#" class="btnClose" id="btnClose">
+                <i class="fa-solid fa-xmark icoClose" id="icoClose"></i>
+              </a>
+              <h2 class="h2">Reme GN´R</h2>
+              <div class="precio">
+                <p class="precioUnitario"></p>
+              </div>
+              <div class="talle">
+                <p>Talle</p>
+                <ul>
+                  <li>S</li>
+                  <li>M</li>
+                  <li>L</li>
+                  <li>XL</li>
+                  <li>XXL</li>
+                </ul>
+              </div>
+              <div class="cantidad">
+                <p>Cantidad</p>
+                <p class="cantidadElegida">
+                </p>
+              </div>
+              <div class="total">
+                <p>Total</p>
+                <p class="totalCalculado">
+                </p>
+              </div>
+              <p class="btnAgregar">Agregar</p>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <p class="a">a</p> <!-- SOLAMENTE PARA AGREGAR ESPACIO HASTA QUE PONGA MÁS PRODUCTOS -->
+
+
+
+      </section>
+    </section>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/5492612061160" target="_blank" rel="noopener noreferrer">
+      <img src="assets/icon/wtsp.png" class="wtp__fixed" alt="Ícono de acceso al Whatsapp de KPREM Arte Gráfico" />
+    </a>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div data-aos="fade-in" data-aos-duration="1000">
+      <section class="footerKprem">
+        <a href="https://www.instagram.com/kprem_artegrafico/?hl=es-la" rel="noopener noreferrer" target="_blank">
+          <img class="footerIcon" src="assets/icon/insta.png" alt="Enlace al Instagram de KPREM Arte Gráfico" />
+        </a>
+        <a href="https://www.facebook.com/kpremartegrafico/" target="_blank" rel="noopener noreferrer">
+          <img class="footerIcon" src="assets/icon/face.png" alt="Enlace al Facebook de KPREM Arte Gráfico" />
+        </a>
+      </section>
+      <section class="footerDev">
+        <section class="textFooter">
+          <p>© 2022 | All Rights Reserved</p>
+          <p>• Powered by Emanuel Escudero •</p>
+          <a href="https://escuderoemanuel.github.io/Portfolio/" rel="noopener noreferrer" target="_blank">
+            <img class="devImg" src="assets/dev/LogoSinBackground.png" alt="Developer Logotype" />
+          </a>
+        </section>
+      </section>
+    </div>
+  </footer>
+
+
+
+  <!-- ANIMATIONS AOS NPM-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>

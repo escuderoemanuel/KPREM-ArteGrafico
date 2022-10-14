@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", "Lato", sans-serif;
+  width: 100%;
+}
+body .wtp__fixed {
+  position: fixed;
+  max-width: 64px;
+  bottom: 15px;
+  right: 15px;
+}
+body .wtp__fixed:hover {
+  transform: scale(1.06);
+  transition: all 300ms ease;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  background-color: black;
+}
+.header .headerContainer {
+  padding: 0.5rem;
+}
+.header .headerContainer .headerLogo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+.header .headerContainer .headerMenu {
+  font-style: italic;
+  align-items: center;
+}
+.header .headerContainer .headerMenu .linkMenu {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  display: inline;
+  position: relative;
+}
+.header .headerContainer .headerMenu .linkMenu .headerIcon {
+  max-width: 32px;
+}
+.header .headerContainer .headerMenu .linkMenu .headerIcon:hover {
+  transform: scale(1.1);
+  transition: all 500ms ease;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  color: gray;
+  padding: 0.5rem;
+}
+.footer .footerKprem {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.footer .footerKprem .footerIcon {
+  width: 32px;
+  margin: 0.5rem;
+}
+.footer .footerKprem .footerIcon:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+  transition: all 200ms ease;
+}
+.footer .footerDev {
+  border-top: 1px solid gray;
+}
+.footer .footerDev .textFooter {
+  margin-top: 1rem;
+}
+.footer .footerDev .devImg {
+  margin: 0.5rem;
+  width: 50px;
+}
+
+.main {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.main .mainText {
+  margin: 1rem;
+}
+.main .mainText .emBold {
+  font-weight: bold;
+}
+.main .mainProductos {
+  display: grid;
+}/*# sourceMappingURL=style.css.map */

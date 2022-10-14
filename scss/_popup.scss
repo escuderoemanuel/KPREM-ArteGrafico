@@ -1,0 +1,73 @@
+/* OVERLAY / POPUP / BTN / ICO */
+.overlay {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 0;
+  opacity: 0;
+  display: none;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+    display: block;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(241, 241, 241, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  overflow: auto;
+  word-wrap: break-word;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  display: none;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+    display: block;
+  }
+
+  .btnClose {
+    display: inline;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    text-decoration: none;
+  }
+
+  .icoClose {
+    font-size: 1.5rem;
+    color: #000000;
+    transition: 0.3s ease all;
+
+    &:hover {
+      color: #adadad;
+    }
+  }
+
+  .talle li {
+    list-style: none;
+    background-color: lightgray;
+    display: inline-flex;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

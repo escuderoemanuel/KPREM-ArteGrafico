@@ -1,0 +1,24 @@
+{
+  "name": "kprem",
+  "version": "1.0.0",
+  "description": "Project name: KPREM Arte Gráfico",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escuderoemanuel/KPREM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/escuderoemanuel/KPREM/issues"
+  },
+  "homepage": "https://github.com/escuderoemanuel/KPREM#readme"
+}

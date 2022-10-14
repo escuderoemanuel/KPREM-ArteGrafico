@@ -1,0 +1,27 @@
+.header {
+  background-color: black;
+
+  .headerContainer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: 1rem;
+
+    .headerLogo {
+      max-width: 150px;
+    }
+
+    .linkMenu {
+      text-decoration: none;
+    }
+    .headerIcon {
+      max-width: 32px;
+      margin: 0.75rem 0.5rem;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 500ms ease;
+      }
+    }
+  }
+}

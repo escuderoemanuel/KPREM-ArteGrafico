@@ -1,0 +1,35 @@
+.footer {
+  background-color: black;
+  text-align: center;
+  color: gray;
+  padding: 0.5rem;
+
+  .footerKprem {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+
+    .footerIcon {
+      width: 32px;
+      margin: 0.5rem;
+
+      &:hover {
+        transform: scale(1.2);
+        opacity: 0.9;
+        transition: all 200ms ease;
+      }
+    }
+  }
+
+  .footerDev {
+    border-top: 1px solid gray;
+
+    .textFooter {
+      margin-top: 1rem;
+    }
+    .devImg {
+      margin: 0.5rem;
+      width: 50px;
+    }
+  }
+}
