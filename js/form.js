@@ -89,37 +89,41 @@ function crearCuenta() {
       lastnameInput.value,
       emailInput.value,
       passInput.value,
-      celInput.value,
-      termsConditions.value
+      celInput.value
     )
   );
 }
 
 /* BOTÓN "REGISTRARME": Valida los inputs del form (Nota: Mejorar con function genérica y expresiones regulares)*/
+
 function validation() {
+  let nombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Letras, espacios, acentos.
   let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  let password = /^.{4,12}$/; // 4 a 12 digitos.
+  let telefono = /^\d{7,14}$/; // 7 a 14 numeros.
   let mensaje = [];
   let valor = false;
-  if (nameInput.value.length <= 2 || nameInput.value == null) {
-    mensaje.push("🚨 Ingresa un Nombre válido");
+  if (nombre.test(nameInput.value) != true) {
+    mensaje.push("🚫 Ingresa un Nombre válido");
     valor = true;
   }
-  if (lastnameInput.value.length <= 2 || lastnameInput.value == null) {
-    mensaje.push("🚨 Ingresa un Apellido válido");
+  if (nombre.test(lastnameInput.value) != true) {
+    mensaje.push("🚫 Ingresa un Apellido válido");
     valor = true;
   }
   if (emailRegex.test(emailInput.value) != true) {
-    mensaje.push("🚨 Ingresa un Email válido");
+    mensaje.push("🚫 Ingresa un Email válido");
     valor = true;
   }
-  if (passInput.value.length <= 6 || passInput.value == null) {
-    mensaje.push("🚨 Ingresa una contraseña válida");
+  if (password.test(passInput.value) != true) {
+    mensaje.push("🚫 Ingresa una contraseña válida");
     valor = true;
   }
-  if (celInput.value.length < 9 || celInput.value == null) {
-    mensaje.push("🚨 Ingresa un número telefónico válido");
+  if (telefono.test(celInput.value) != true) {
+    mensaje.push("🚫 Ingresa un número telefónico válido");
     valor = true;
   }
+
   if (valor) {
     alertRegister.innerHTML = mensaje.join("<br>");
   } else {
@@ -155,10 +159,10 @@ function login(event) {
   let passConsultada = passInputLogin.value;
   cuenta = buscarCuenta(emailConsultado);
   if (cuenta != undefined && passConsultada == cuenta.pass) {
-    alertLogin.innerHTML = "Ingreso Exitoso <br>Ya puede cerrar la ventana";
-    cerrarFormAlIngresar();
+    alertLogin.innerHTML = "✅ Ingreso Exitoso";
+    setTimeout(cerrarFormAlIngresar, 2000);
   } else {
-    alertLogin.innerHTML = "Usuario No Registrado o Datos Incorrectos";
+    alertLogin.innerHTML = "🚫 Usuario No Registrado o Datos Incorrectos";
     limpiarForms();
   }
 }

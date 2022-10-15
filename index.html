@@ -28,8 +28,6 @@
   <!-- CSS STYLE -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- JS SCRIPT -->
-  <script src="js/script.js" defer></script>
-  <script src="js/popups.js" defer></script>
   <script src="js/form.js" defer></script>
   <!-- AOS ANIMATION -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -39,6 +37,7 @@
 
 <body class="body">
 
+  <!-- FORMULARIOS DE INGRESO -->
   <div class="tabContainer active animate__animated animate__fadeInUp animate__slow" id="tabContainer">
 
     <div class="tab">
@@ -91,12 +90,11 @@
 
             <!-- TERMS -->
             <div class="divForm terms">
-              <input class="checkInput" type="checkbox" id="flexSwitchCheckDefault" required />
-              <label class="form-check-label" id="termsConditions" for="flexSwitchCheckDefault">
-                Acepto los <br>
-                <a href="#" target="_blank" class="termsConditions">
+              <p> Al registrarme acepto los <br>
+                <a href="pages/terms.html" target="_blank" class="termsConditions" rel="noopener noreferrer">
                   <em>Términos y Condiciones</em>
                 </a>
+              </p>
               </label>
             </div>
 
@@ -138,8 +136,10 @@
             <div class="divForm submitLogin">
               <button type="submit" class="btnSubmitLogin" id="btnSubmitLogin">Entrar</button>
             </div>
+
+            <!-- ALERTS -->
             <div>
-              <p id="alertLogin"></p>
+              <p id="alertLogin" class="alertLogin"></p>
             </div>
           </form>
 
@@ -177,83 +177,8 @@
 
   <!-- MAIN -->
   <main class="main">
-
-    <section class="containerMain" data-aos="fade-up" data-aos-duration="3000">
-
-      <!-- TEXT INTRO -->
-      <section class="mainText">
-        <p>
-          En <em class="emBold">KPREM Arte Gráfico</em> nos dedicamos a la personalización de diferentes productos,
-          mediante
-          técnicas de estampación, como lo son la sublimación, serigrafía y
-          vinilo.
-        </p>
-        <p>
-          Te invitamos a conocer nuestra tienda y elegir el producto que
-          gustes, con el diseño que siempre quisiste!
-        </p>
-      </section>
-
-      <!-- PRODUCTOS -->
-      <section class="mainProductos">
-
-        <!-- REMERA GUNS -->
-        <div class="productosCard" id="remeGnr">
-          <a class="cardItems" href="#">
-            <img class="productoItem remera" src="assets/productos/remera/guns.png"
-              alt="Imagen de remera personalizada">
-            <h2 class="h2">Reme GN´R</h2>
-          </a>
-          <!-- REMERA GUNS // POP UP -->
-          <div class="overlay overlayGuns" id="overlay">
-            <div class="popup popupGuns" id="popup">
-              <a href="#" class="btnClose" id="btnClose">
-                <i class="fa-solid fa-xmark icoClose" id="icoClose"></i>
-              </a>
-              <h2 class="h2">Reme GN´R</h2>
-              <div class="precio">
-                <p class="precioUnitario"></p>
-              </div>
-              <div class="talle">
-                <p>Talle</p>
-                <ul>
-                  <li>S</li>
-                  <li>M</li>
-                  <li>L</li>
-                  <li>XL</li>
-                  <li>XXL</li>
-                </ul>
-              </div>
-              <div class="cantidad">
-                <p>Cantidad</p>
-                <p class="cantidadElegida">
-                </p>
-              </div>
-              <div class="total">
-                <p>Total</p>
-                <p class="totalCalculado">
-                </p>
-              </div>
-              <p class="btnAgregar">Agregar</p>
-
-
-            </div>
-          </div>
-
-        </div>
-
-        <p class="a">a</p> <!-- SOLAMENTE PARA AGREGAR ESPACIO HASTA QUE PONGA MÁS PRODUCTOS -->
-
-
-
-      </section>
-    </section>
-
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/5492612061160" target="_blank" rel="noopener noreferrer">
-      <img src="assets/icon/wtsp.png" class="wtp__fixed" alt="Ícono de acceso al Whatsapp de KPREM Arte Gráfico" />
-    </a>
-
+    <p>Bienvenido</p>
+    <p>¡Tienda en Construcción!</p>
   </main>
 
 
