@@ -14,7 +14,7 @@ html {
   font-family: "Ubuntu", "Lato", sans-serif;
 }
 html body {
-  width: 100vw;
+  width: 100%;
   background-color: black;
 }
 
@@ -39,13 +39,11 @@ html body {
   position: relative;
   top: 5vh;
   left: 5vw;
-  width: 85vw;
+  width: 90vw;
   height: 90vh;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(255, 0, 128, 0.5);
   border-radius: 15px;
   overflow: auto;
@@ -54,12 +52,14 @@ html body {
   .tabContainer .tab {
     width: 70vw;
     height: 95vh;
+    left: 15vw;
   }
 }
 @media screen and (min-width: 900px) {
   .tabContainer .tab {
     width: 50vw;
     height: 95vh;
+    left: 25vw;
   }
 }
 .tabContainer .headerTab {
@@ -177,7 +177,7 @@ html body {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .header .headerContainer .headerLogo {
   max-width: 150px;
@@ -232,12 +232,26 @@ html body {
   flex-direction: column;
   font-size: 2em;
   text-align: center;
+  align-items: center;
+}
+.main .img {
+  margin-top: 2rem;
+  width: 50px;
 }
 
 .mainCarrito {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.mainTerms {
+  padding: 1rem 2rem;
+  font-size: 1em;
+}
+.mainTerms h1 {
+  font-size: 2em;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
