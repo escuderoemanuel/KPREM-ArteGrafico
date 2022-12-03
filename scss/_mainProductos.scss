@@ -1,0 +1,96 @@
+.productosCard {
+  background: rgb(0, 166, 214);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 166, 214, 1) 0%,
+    rgba(0, 121, 255, 1) 100%
+  );
+  width: 300px;
+  height: 310px;
+  margin: 1rem 0;
+  border-radius: 25px;
+  box-shadow: $shadow3;
+  border: $borderWhite2;
+  display: flex;
+  position: relative;
+
+  .cardItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 20px;
+
+    .productoItem {
+      height: 250px;
+    }
+
+    .itemsProducto {
+      //background-color: $color-magenta;
+      //box-shadow: $shadow3;
+      //border: $borderWhite1;
+      color: white;
+      //padding: $mp05;
+      //border-radius: $radius;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 110px;
+
+      //transform: skew(-10deg);
+
+      .h2 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+
+      .precioProducto,
+      .talle {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $mp05;
+        padding: 0.2rem;
+      }
+
+      .precioProducto {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      select {
+        border: 1px solid black;
+        border-radius: $radius;
+        width: 4rem;
+        border: none;
+        margin: 0 $mp05;
+
+        option {
+          text-align: center;
+        }
+      }
+
+      .btnAgregar {
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        padding: $mp05 $mp1;
+        cursor: pointer;
+        background-color: $color-magenta;
+        border-radius: $radius;
+        border: none;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: $transition;
+        }
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

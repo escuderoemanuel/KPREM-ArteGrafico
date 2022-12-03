@@ -4,6 +4,7 @@
 /* SHADOWS */
 /* BORDERS */
 /* RADIUS */
+/* MARGINS */
 * {
   margin: 0;
   padding: 0;
@@ -28,24 +29,34 @@ html body {
   display: none;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 .tabContainer.active {
   display: block;
+}
+.tabContainer input {
+  background-color: rgba(0, 166, 214, 0.2);
+  outline: none;
+  color: gray;
+}
+.tabContainer ::placeholder {
+  font-size: 0.9em;
+  font-style: italic;
+  color: darkgray;
 }
 .tabContainer .tab {
   font-family: "Ubuntu", "Lato", sans-serif;
   font-size: 1em;
   position: relative;
-  top: 5vh;
+  top: 3vh;
   left: 5vw;
   width: 90vw;
   height: 90vh;
-  color: white;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 0, 128, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
+  border: solid 1px white;
   overflow: auto;
 }
 @media screen and (min-width: 600px) {
@@ -63,7 +74,7 @@ html body {
   }
 }
 .tabContainer .headerTab {
-  background-color: rgb(255, 0, 128);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 50px;
 }
@@ -71,7 +82,7 @@ html body {
   position: absolute;
   right: 0;
   top: 0;
-  color: white;
+  color: gray;
   margin: 0.3rem 0.5rem;
 }
 .tabContainer .btnCloseTab:hover {
@@ -86,15 +97,13 @@ html body {
   flex-grow: 1;
   text-align: center;
   line-height: 2rem;
-  color: white;
-  font-weight: lighter;
-  font-size: 1.2em;
+  color: rgb(99, 99, 99);
+  font-size: 1em;
   font-style: italic;
   margin-top: 1rem;
 }
 .tabContainer .options .option.optionActive {
-  font-weight: bolder;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid rgb(255, 0, 128);
 }
 .tabContainer .contents {
   width: 100%;
@@ -104,7 +113,7 @@ html body {
 .tabContainer .contents .content {
   width: 100;
   height: 100%;
-  color: white;
+  color: rgb(99, 99, 99);
   display: none;
   padding: 20px;
 }
@@ -152,7 +161,7 @@ html body {
 }
 .tabContainer .contents .form .divForm .btnSubmit:hover,
 .tabContainer .contents .form .divForm .btnSubmitLogin:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: all 200ms ease;
 }
 .tabContainer .contents .form .alertRegister,
@@ -167,15 +176,16 @@ html body {
   text-align: center;
 }
 .tabContainer .contents .form .terms a {
-  color: greenyellow;
+  color: gray;
 }
 
 .header {
   background-color: black;
+  color: white;
 }
 .header .headerContainer {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
   padding: 0.5rem;
 }
@@ -193,8 +203,15 @@ html body {
   transform: scale(1.1);
   transition: all 500ms ease;
 }
+.header .headerContainer .user {
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+  color: rgb(173, 255, 47);
+}
 
 .footer {
+  font-size: 0.9rem;
   background-color: black;
   text-align: center;
   color: gray;
@@ -210,9 +227,9 @@ html body {
   margin: 0.5rem;
 }
 .footer .footerKprem .footerIcon:hover {
-  transform: scale(1.2);
-  opacity: 0.9;
-  transition: all 200ms ease;
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 300ms ease;
 }
 .footer .footerDev {
   border-top: 1px solid gray;
@@ -222,27 +239,139 @@ html body {
 }
 .footer .footerDev .devImg {
   margin: 0.5rem;
-  width: 50px;
+  width: 40px;
 }
 
 .main {
-  padding: 100px 50px 300px;
+  padding: 2rem 2rem 4rem;
   background-color: white;
+}
+.main .containerMain {
   display: flex;
   flex-direction: column;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
+  justify-content: center;
   align-items: center;
 }
-.main .img {
-  margin-top: 2rem;
-  width: 50px;
+
+.productosCard {
+  background: rgb(0, 166, 214);
+  background: linear-gradient(0deg, rgb(0, 166, 214) 0%, rgb(0, 121, 255) 100%);
+  width: 300px;
+  height: 310px;
+  margin: 1rem 0;
+  border-radius: 25px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
+  border: solid 2px white;
+  display: flex;
+  position: relative;
+}
+.productosCard .cardItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.productosCard .cardItems .productoItem {
+  height: 250px;
+}
+.productosCard .cardItems .itemsProducto {
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 110px;
+}
+.productosCard .cardItems .itemsProducto .h2 {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.productosCard .cardItems .itemsProducto .precioProducto,
+.productosCard .cardItems .itemsProducto .talle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+}
+.productosCard .cardItems .itemsProducto .precioProducto {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.productosCard .cardItems .itemsProducto select {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 4rem;
+  border: none;
+  margin: 0 0.5rem;
+}
+.productosCard .cardItems .itemsProducto select option {
+  text-align: center;
+}
+.productosCard .cardItems .itemsProducto .btnAgregar {
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 0, 128);
+  border-radius: 15px;
+  border: none;
+}
+.productosCard .cardItems .itemsProducto .btnAgregar:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease;
+}
+.productosCard .cardItems .itemsProducto .btnAgregar:active {
+  transform: scale(1);
 }
 
 .mainCarrito {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+.mainCarrito .titleCarrito {
+  font-size: 1.5em;
+  font-style: italic;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.mainCarrito .table {
+  padding: 0.5rem;
+  background-color: rgb(173, 255, 47);
+  width: 90%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.mainCarrito .table .thead {
+  background-color: rgb(173, 255, 47);
+  font-size: 1.1em;
+}
+.mainCarrito .table .thead th {
+  padding: 0.5rem;
+}
+.mainCarrito .table .tbody {
+  background-color: rgb(219, 219, 219);
+}
+.mainCarrito .table .tbody td {
+  padding: 1rem;
+}
+.mainCarrito .table .tbody tr:nth-of-type(odd) {
+  background-color: whitesmoke;
+}
+.mainCarrito .table .tfoot {
+  background-color: rgb(173, 255, 47);
+  border-top: 2px solid white;
+}
+.mainCarrito .table .tfoot th {
+  font-size: 1.1em;
+  font-style: italic;
+  padding: 0.5rem;
 }
 
 .mainTerms {

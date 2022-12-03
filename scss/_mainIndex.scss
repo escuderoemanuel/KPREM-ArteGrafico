@@ -1,14 +1,13 @@
 .main {
-  padding: 100px 50px 300px;
+  padding: 2rem 2rem 4rem;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 2em;
-  text-align: center;
-  align-items: center;
 
-  .img {
-    margin-top: 2rem;
-    width: 50px;
+  .containerMain {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 }

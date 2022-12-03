@@ -1,9 +1,10 @@
 .header {
   background-color: black;
+  color: white;
 
   .headerContainer {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
     padding: 0.5rem;
 
@@ -22,6 +23,13 @@
         transform: scale(1.1);
         transition: all 500ms ease;
       }
+    }
+
+    .user {
+      font-size: 0.8em;
+      font-style: italic;
+      text-align: center;
+      color: $color-green;
     }
   }
 }

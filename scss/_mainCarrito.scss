@@ -2,4 +2,49 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  .titleCarrito {
+    font-size: 1.5em;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: $mp1;
+  }
+
+  .table {
+    padding: $mp05;
+    background-color: $color-green;
+    width: 90%;
+    overflow-x: auto;
+    border-collapse: collapse;
+
+    .thead {
+      background-color: $color-green;
+      font-size: 1.1em;
+
+      th {
+        padding: $mp05;
+      }
+    }
+
+    .tbody {
+      background-color: rgb(219, 219, 219);
+      td {
+        //border-radius: 10px;
+        padding: $mp1;
+      }
+      tr:nth-of-type(odd) {
+        background-color: whitesmoke;
+      }
+    }
+
+    .tfoot {
+      background-color: $color-green;
+      border-top: 2px solid white;
+      th {
+        font-size: 1.1em;
+        font-style: italic;
+        padding: $mp05;
+      }
+    }
+  }
 }

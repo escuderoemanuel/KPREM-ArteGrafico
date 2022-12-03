@@ -28,7 +28,10 @@
   <!-- CSS STYLE -->
   <link rel="stylesheet" href="../css/style.css" />
   <!-- JS SCRIPT -->
-  <script src="../js/form.js" defer></script>
+  <!-- <script src="../js/form.js" defer></script> -->
+  <script src="../js/productoClass.js" defer></script>
+  <script src="../js/itemClass.js" defer></script>
+  <script src="../js/carrito.js" defer></script>
   <!-- AOS ANIMATION -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- ANIMATE -->
@@ -65,9 +68,32 @@
 
   <!-- MAIN -->
   <main class="main mainCarrito">
-    <h1>Layout Carrito</h1>
-    <p>¡Tienda en Construcción!</p>
-    <p>• Items de carrito •</p>
+    <h1 class="titleCarrito">Carrito de Compras</h1>
+
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Talle</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th>Operación</th>
+        </tr>
+      </thead>
+      <tbody class="tbody" id="items">
+
+      </tbody>
+      <tfoot class="tfoot">
+        <tr>
+          <th>Total:</th>
+          <th></th>
+          <th></th>
+          <th>$</th>
+          <th></th>
+        </tr>
+      </tfoot>
+    </table>
   </main>
 
 
