@@ -30,14 +30,21 @@ html body {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
+  /* COLOR-PALET
+  $color-cyan: rgba(0, 166, 214, 1);
+  $color-magenta: rgba(255, 0, 128, 1);
+  $color-magentaDark: rgba(223, 0, 111, 1);
+  $color-orange: rgba(255, 69, 0, 1);
+  $color-blue: rgba(0, 121, 255, 1);
+  $color-green: rgba(173, 255, 47, 1); */
 }
 .tabContainer.active {
   display: block;
 }
 .tabContainer input {
-  background-color: rgba(0, 166, 214, 0.2);
-  outline: none;
+  outline: 0.5px solid rgb(173, 255, 47);
   color: gray;
+  font-style: italic;
 }
 .tabContainer ::placeholder {
   font-size: 0.9em;
@@ -56,7 +63,7 @@ html body {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  border: solid 1px white;
+  border: 1px solid rgb(173, 255, 47);
   overflow: auto;
 }
 @media screen and (min-width: 600px) {
@@ -103,7 +110,7 @@ html body {
   margin-top: 1rem;
 }
 .tabContainer .options .option.optionActive {
-  border-bottom: 4px solid rgb(255, 0, 128);
+  border-bottom: 4px solid rgb(173, 255, 47);
 }
 .tabContainer .contents {
   width: 100%;
@@ -127,6 +134,9 @@ html body {
   /* ALERTS DEL FORM */
   /* DIV DE TERMS */
 }
+.tabContainer .contents .form .form-label {
+  margin-bottom: 0.1rem;
+}
 .tabContainer .contents .form .divForm {
   display: flex;
   flex-direction: column;
@@ -146,7 +156,7 @@ html body {
 }
 .tabContainer .contents .form .divForm .btnSubmit,
 .tabContainer .contents .form .divForm .btnSubmitLogin {
-  background-color: rgb(255, 0, 128);
+  background-color: rgb(173, 255, 47);
   font-family: "Ubuntu", "Lato", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -154,7 +164,7 @@ html body {
   font-size: 0.9em;
   font-style: italic;
   letter-spacing: 2px;
-  border: solid 1px white;
+  border: solid 2px white;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   border-radius: 45px 25px 45px 25px;
