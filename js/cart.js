@@ -1,225 +1,182 @@
+// CLASE PRODUCT
+class Product {
+  constructor(id, name, stock, price) {
+    this.id = parseInt(id);
+    this.name = name;
+    this.stock = parseInt(stock);
+    this.price = parseFloat(price);
+    this.taxes = 21;
+    this.discount = 10;
+  }
+  taxesApply() {
+    this.price + (this.price * this.taxes) / 100;
+  }
+  discountApply() {
+    this.price - (this.price * this.discount) / 100;
+  }
+}
+
+//ARRAY OF PRODUCTS STOCK
+let products = [];
+products.push(new Product(1, "REMERA GNR", 4, 3500));
+products.push(new Product(2, "REMERA LED ZEP", 3, 3500));
+products.push(new Product(3, "REMERA AC DC", 5, 3500));
+products.push(new Product(4, "REMERA PINK FLOYD", 1, 3500));
+products.push(new Product(5, "REMERA DEEP PURPLE", 6, 3500));
+
 //ARRAY OF PRODUCTS IN CART
 const productsCart = [];
 
-//ARRAY OF FINAL ORDER
-const order = [];
-
-//PROGRAMA PRINCIPAL
-/* function program() {
-  let optionLoadBuy;
-  do {
-    //OPTION DE CARGAR, COMPRAR, SALIR:
-    optionLoadBuy = prompt(`🔹Opciones🔹 \n\n📝 1• Cargar Productos \n🛒 2• Comprar\n🔻 3• Salir `).toLowerCase();
-    if (optionLoadBuy == "1") {
-      productsLoad();
-    } else if (optionLoadBuy == "2") {
-      productsBuy();
-    } else if (optionLoadBuy == "3") {
-      alert("⏱️ Saliendo...");
-    } else {
-      alert("Opción NO Válida!")
-    }
-  } while (program());
-}
- */
-
-//OPTION DE CARGAR, COMPRAR, SALIR:
+//PROGRAMA PRINCIPAL (CARGAR, COMPRAR, SALIR)
 function program() {
-  let optionLoadBuy = prompt(
-    `🔹Opciones🔹 \n\n📝 1• Cargar Productos \n🛒 2• Comprar\n🔻 3• Salir `
-  ).toLowerCase();
-
-  while (optionLoadBuy != "1" && optionLoadBuy != "2" && optionLoadBuy != "3") {
-    optionLoadBuy = prompt(
-      `🔹Opciones🔹 \n\n📝 1• Cargar Productos \n🛒 2• Comprar\n🔻 3• Salir `
-    ).toLowerCase();
-  }
-  if (optionLoadBuy == "1") {
-    productsLoad();
-    program();
-  } else if (optionLoadBuy == "2") {
-    productsBuy();
-    program();
-  } else if (optionLoadBuy == "2") {
-    alert("⏱️ Saliendo...");
-  }
-}
-
-//FUNCIONES
-function productsLoad() {
-  let optionLoad = prompt(
-    "Desea cargar un producto? 🤌 \n•Si •No "
-  ).toLowerCase();
-
-  //Valida entrada (repregunta o sale)
-  while (optionLoad != "no" && optionLoad != "si")
-    optionLoad = prompt("Desea cargar un producto?: \n•Si •No ").toLowerCase();
-
-  //Si es "si", pide datos y valida los ingresos
-  if (optionLoad == "si") {
-    let id = products.length + 1;
-    let name = prompt("➡️ Ingresa el Nombre del producto:").toUpperCase();
-    while (name == null || name.length <= 1) {
-      name = prompt("Ingresa el Nombre del producto:").toUpperCase();
-    }
-
-    let stock = parseInt(prompt("Ingresa el Stock del producto:"));
-    while (!Number.isInteger(stock)) {
-      stock = parseInt(prompt("Ingresa el Stock del producto:"));
-    }
-
-    let price = parseFloat(prompt("Ingresa el Precio (AR$) del producto:"));
-    while (isNaN(price)) {
-      price = parseFloat(prompt("Ingresa el Precio (AR$) del producto:"));
-    }
-
-    //FUNCIÓN IIFE QUE CREA NUEVO PRODUCTO
-    (function newProduct() {
-      products.push(new Product(id, name, stock, price));
-    })();
-
-    productsLoad();
-    //Si es "no", sale de la función "productLoad"
-  } else {
-    alert("Hasta la vista! 👋");
-  }
-}
-
-function productsBuy() {
-  let addProduct = true;
-  while (addProduct) {
-    let listProducts = [];
-    for (let product of products) {
-      listProducts += `${product.id}- ${product.name}, $AR ${product.price}\n`;
-    }
-    let itemSelected = parseInt(
-      prompt(
-        `🛒🛍️ PRODUCTOS EN STOCK 🛍️🛒\n\n${listProducts} \nElige un producto para agregar al carrito:`
-      )
-    );
-    let product = foundProduct(itemSelected);
-    if (product != null) {
-      productsCart.push(product);
-    } else {
-      alert("No existe el producto seleccionado!");
-    }
-    addProduct = confirm("Desea agregar otro producto?"); //Devuelve true o false
-    if (addProduct == false) {
-      console.log(productsCart);
-      showCart();
-    }
-    /* while (product == null) {
-      productsBuy();
-    } 
-    addProduct = prompt("Cargar otro producto?\n\n•Si •No").toLowerCase();
-    while (addProduct != "si" && addProduct != "no") {
-      addProduct = prompt("Cargar otro producto?\n\n•Si •No").toLowerCase();
-    }
-    if (addProduct == "si") {
-      itemSelected = parseInt(
-        prompt(
-          `🛒🛍️ PRODUCTOS EN STOCK 🛍️🛒\n\n${listProducts} \nElige un producto para agregar al carrito:` 
-        )
-      );
-      
-      
-    } else if (addProduct == "no") {
-      showCart();
-    } */
-
-    //Si está tengo que pushear el item seleccionado al productsCart
-  }
-  // Falta Mostrar los Productos Cargados al dar en Cancelar o "NO Cargar más productos"
-  // Hacer el cálculo del total de los productos y mostrarlos en alert o confirm
-}
-
-let listProductsCart = [];
-function showCart() {
-  for (let product of productsCart) {
-    listProductsCart += `${product.id}- ${product.name}, $AR ${product.price}\n`;
-  }
-  let confirmOrDelete = parseInt(
+  let optionLoadBuy = parseInt(
     prompt(
-      `🛒🛍️ PRODUCTOS EN EL CARRITO 🛍️🛒\n\n${listProductsCart} \n•1: Terminar Compra\n•2: Eliminar Producto`
+      `🔹Opciones🔹 \n\n📝 1• Cargar Productos \n🛒 2• Comprar\n🔻 3• Salir `
     )
   );
-  while (confirmOrDelete != 1 && confirmOrDelete != 2) {
-    confirmOrDelete;
+  while (optionLoadBuy != 1 && optionLoadBuy != 2 && optionLoadBuy != 3) {
+    optionLoadBuy = parseInt(
+      prompt(
+        `🔹Opciones🔹 \n\n📝 1• Cargar Productos \n🛒 2• Comprar\n🔻 3• Salir `
+      )
+    );
   }
-  if (confirmOrDelete == 1) {
-    toPay();
-    //toPay();
-  } else {
-    //alert("Mostrando elementos a borrar...");
-    deleteProduct(product);
+  if (optionLoadBuy == 1) {
+    productsLoad();
+    program();
+  } else if (optionLoadBuy == 2) {
+    productsBuy();
+  } else if (optionLoadBuy == 3) {
+    alert("⏱️ Arrivederci...");
   }
 }
 
-function toPay() {
-  let finalPrice = 0;
-  for (let product of productsCart) {
-    finalPrice += product.price;
+//FUNCION CARGAR PRODUCTO A MANO AL ARRAY STOCK
+function productsLoad() {
+  let id = products.length + 1;
+  let name = prompt("➡️ Ingresa el Nombre del producto:").toUpperCase();
+  while (name == null || name.length <= 1) {
+    name = prompt("➡️ Ingresa el Nombre del producto:").toUpperCase();
   }
-  alert(
-    `🛍️ Productos 🛍️\n\n${listProductsCart}\nTOTAL A PAGAR AR$${finalPrice}`
-  );
+  let stock = parseInt(prompt("🔢 Ingresa el Stock del producto:"));
+  while (!Number.isInteger(stock)) {
+    stock = parseInt(prompt("🔢 Ingresa el Stock del producto:"));
+  }
+  let price = parseFloat(prompt("💵 Ingresa el Precio (AR$) del producto:"));
+  while (isNaN(price)) {
+    price = parseFloat(prompt("💵 Ingresa el Precio (AR$) del producto:"));
+  }
+  //FUNCIÓN IIFE QUE CREA NUEVO PRODUCTO
+  (function newProduct() {
+    products.push(new Product(id, name, stock, price));
+  })();
 }
 
-function deleteProduct(id) {
-  let productToDelete = parseInt(
-    prompt(`Seleccione el producto que desea eliminar:\n\n${listProductsCart}`)
-  );
-  productToDelete = listProductsCart.findIndex((item) => item.id === id);
-  if (productToDelete > -1) {
-    listProductsCart.slice(productToDelete, 1);
-  }
-  showCart();
-}
-
-//Tengo que buscar si el item está en la listProducts
+//Busca si el item está en la listProducts
 function foundProduct(id) {
   return products.find((item) => item.id === id) || null;
 }
 
-productsBuy();
-//program();
+//Pushea el producto al array carrito
+function addProduct(product) {
+  productsCart.push(product);
+}
 
-/* function eliminarProducto(id) {
-  let pos = productos_carrito.findIndex((item) => item.id === id);
-
+//Elimina producto del array carrito
+function spliceProduct(id) {
+  let pos = productsCart.findIndex((item) => item.id === id);
   if (pos > -1) {
-    productos_carrito.splice(pos, 1);
+    productsCart.splice(pos, 1);
   }
-} */
+}
 
-/* FUNCIONA
+//Función para iterar sobre todos los productos
+function iterateProducts() {
+  let productContainer = "";
+  for (let product of products) {
+    productContainer += `${product.id} ➡️ ${product.name}, AR$ ${product.price}\n`;
+  }
+  return productContainer;
+}
 
+//Función para iterar sobre los productos del carrito
+function iterateProductsCart() {
+  let productContainer = "";
+  for (let product of productsCart) {
+    productContainer += `${product.id} ➡️ ${product.name}, AR$ ${product.price}\n`;
+  }
+  return productContainer;
+}
+
+//Agrega productos al carrito
 function productsBuy() {
-  cargarProducto = true;
-  let listProducts = [];
-  while (cargarProducto) {
-    for (let product of products) {
-      listProducts += `${product.id}- ${product.name}, $AR ${product.price}\n`;
-    }
+  let add = true;
+  while (add) {
+    let productContainer = iterateProducts();
     let itemSelected = parseInt(
       prompt(
-        `🛒🛍️ PRODUCTOS EN STOCK 🛍️🛒\n\n${listProducts} \nElige un producto para agregar al carrito:`
+        `🛒🛍️ PRODUCTOS EN STOCK 🛍️🛒\n${productContainer} \nElige un producto para agregar al carrito:`
       )
     );
-    let producto = buscarProducto(itemSelected);
-    cargarProducto = confirm("Cargar otro producto?");
-    console.log(`Item Selected= ${itemSelected}`);
-    console.log(producto);
+    let product = foundProduct(itemSelected);
+    if (product != null) {
+      addProduct(product);
+    } else {
+      alert("No existe el producto seleccionado!");
+    }
+    add = confirm("Desea agregar otro producto?"); //Devuelve true o false
+    if (add == false) {
+      let option = parseInt(
+        prompt(
+          `Opciones:\n\n1 ❎ Eliminar Producto del Carrito\n2 🛒 Terminar la Compra`
+        )
+      );
+      if (option === 1) {
+        deleteProduct();
+      } else if (option === 2) {
+        showCart();
+      } else {
+        alert("ERROR");
+      }
+    }
   }
-
-  //Tengo que buscar si el item está en la listProducts
-
-  //Si está tengo que pushear el item seleccionado al productsCart
-  //productsCart.push(itemSelected);
 }
 
-function buscarProducto(id) {
-  return products.find((item) => item.id === id) || null;
+//Elimina productos del carrito
+function deleteProduct() {
+  let del = true;
+  while (del) {
+    let productContainer = iterateProductsCart();
+    let itemSelected = parseInt(
+      prompt(
+        `Productos:\n\n${productContainer}\n\nSeleccione el producto a eliminar`
+      )
+    );
+    //let product = foundProduct(itemSelected);
+    if (itemSelected > 0 && itemSelected <= productsCart.length) {
+      spliceProduct(itemSelected);
+    } else {
+      alert("No existe el producto seleccionado");
+    }
+    del = confirm("¿Desea eliminar otro producto?");
+    if (del === false) {
+      showCart();
+    }
+  }
 }
 
-*/
+//Muestra el total
+function showCart() {
+  let total = 0;
+  let productContainer = "";
+
+  for (let product of productsCart) {
+    productContainer += `${product.id} ➡️ ${product.name}, AR$${product.price}\n`;
+    total += product.price;
+  }
+  alert(
+    `🛍️ Productos en el carrito 🛍️\n\n${productContainer}\nTotal a pagar AR$${total} 💵`
+  );
+}
+
+program();
