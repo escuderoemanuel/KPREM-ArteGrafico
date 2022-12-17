@@ -147,13 +147,14 @@ function deleteProduct() {
   let del = true;
   while (del) {
     let productContainer = iterateProductsCart();
+
     let itemSelected = parseInt(
       prompt(
         `Productos:\n\n${productContainer}\n\nSeleccione el producto a eliminar`
       )
     );
     //let product = foundProduct(itemSelected);
-    if (itemSelected > 0 && itemSelected <= productsCart.length) {
+    if (itemSelected > 0 && itemSelected <= productContainer.length) {
       spliceProduct(itemSelected);
     } else {
       alert("No existe el producto seleccionado");
