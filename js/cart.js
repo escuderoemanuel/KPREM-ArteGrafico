@@ -85,6 +85,7 @@ function addProduct(product) {
 //Elimina producto del array carrito
 function spliceProduct(id) {
   let pos = productsCart.findIndex((item) => item.id === id);
+
   if (pos > -1) {
     productsCart.splice(pos, 1);
   }
@@ -113,6 +114,7 @@ function productsBuy() {
   let add = true;
   while (add) {
     let productContainer = iterateProducts();
+
     let itemSelected = parseInt(
       prompt(
         `🛒🛍️ PRODUCTOS EN STOCK 🛍️🛒\n${productContainer} \nElige un producto para agregar al carrito:`
@@ -145,6 +147,7 @@ function productsBuy() {
 //Elimina productos del carrito
 function deleteProduct() {
   let del = true;
+  let itemDeleted;
   while (del) {
     let productContainer = iterateProductsCart();
 
@@ -153,13 +156,24 @@ function deleteProduct() {
         `Productos:\n\n${productContainer}\n\nSeleccione el producto a eliminar`
       )
     );
-    //let product = foundProduct(itemSelected);
-    if (itemSelected > 0 && itemSelected <= productContainer.length) {
-      spliceProduct(itemSelected);
+    function foundProduct(id) {
+      return (itemDeleted =
+        productsCart.find((product) => product.id === id) || null);
+    }
+
+    foundProduct(itemSelected);
+
+    let pos = productsCart.findIndex(
+      (itemDeleted) => itemSelected === itemDeleted.id
+    );
+    if (pos >= 0 && pos <= productsCart.length) {
+      productsCart.splice(pos, 1);
+      //spliceProduct(pos);
     } else {
       alert("No existe el producto seleccionado");
     }
     del = confirm("¿Desea eliminar otro producto?");
+
     if (del === false) {
       showCart();
     }
