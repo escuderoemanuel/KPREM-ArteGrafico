@@ -1,7 +1,0 @@
-• let products=[ ]; 
-* products.length = 5
-
-• const productsCart=[ ];
-• const order=[ ];
-• let listProducts =[ ]
-* Lista dentro de la función productBuy
