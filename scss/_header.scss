@@ -12,20 +12,42 @@
       max-width: 150px;
     }
 
-    .linkMenu {
-      text-decoration: none;
-    }
-    .headerIcon {
-      max-width: 32px;
-      margin: 0.75rem 0.5rem;
+    .navBar {
+      position: relative;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      &:hover {
-        transform: scale(1.1);
-        transition: all 500ms ease;
+      .btnCarrito {
+        display: flex;
+        text-decoration: none;
+
+        .carritoIcon {
+          max-width: 32px;
+        }
+
+        .cantidadProductosCarritoIcon {
+          text-align: center;
+          min-width: 20px;
+          max-height: 20px;
+          border-radius: 50px;
+          padding: 4px;
+          font-size: 0.7em;
+          color: white;
+          background-color: $color-magentaDark;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: $transition;
+        }
       }
     }
 
-    .user {
+    .userText {
+      margin-top: 1rem;
       font-size: 0.8em;
       font-style: italic;
       text-align: center;

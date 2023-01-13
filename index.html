@@ -24,15 +24,22 @@
 
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/0752328cab.js" crossorigin="anonymous"></script>
+<!-- SWEETALERT -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
   <!-- CSS STYLE -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- JS SCRIPT -->
-  <script src="js/formTabs.js" defer></script>
-  <script src="js/cuentaClass.js" defer></script>
-  <script src="js/formRegistro.js" defer></script>
-  <script src="js/formIngreso.js" defer></script>
+  <script src="js/forms/formTabs.js" defer></script>
+  <script src="js/forms/cuentaClass.js" defer></script>
+  <script src="js/forms/formRegistro.js" defer></script>
+  <script src="js/forms/formIngreso.js" defer></script>
+  <script src="js/carrito/productoClass.js" defer></script>
+  <script src="js/carrito/stockProductos.js" defer></script>
+  <script src="js/carrito/itemClass.js" defer></script>
+  <script src="js/carrito/carrito.js" defer></script>
 
   <!-- AOS ANIMATION -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -56,31 +63,35 @@
       <!-- MENU -->
       <section class="headerMenu" data-aos="fade-left" data-aos-duration="1500">
         <nav class="navBar">
-          <a class="linkMenu" href="index.html">
-            <img class="headerIcon" src="assets/icon/home.png"
-              alt="Imagen de home, con de acceso a la página principal" />
+          <a class="btnCarrito" href="#" id="btnCarrito">
+            <!-- Aquí dentro queda el carritoIcon y el cantidadProductosCarritoIcon -->
           </a>
-          <a class="linkMenu" href="pages/carrito.html">
-            <img class="headerIcon" src="assets/icon/carrito.png"
-              alt="Imagen de carrito, con acceso al Carrito de Compras" />
-          </a>
-        </nav>
-        <section class="user" id="user">
           <p class="userText" id="userText">Invitado</p>
-        </section>
+        </nav>
+
       </section>
     </div>
   </header>
 
   <!-- MAIN -->
   <main class="main">
+    <div class="mainCarrito" id="mainCarrito">
+      <div class="tablaCarrito" id="tablaCarrito">
+        <div class="headerCarrito">
+          <i class="btn fa-solid fa-xmark icoClose" id="icoClose"></i>
+        </div>
+        <div class="tabla" id="tabla">
+          <!-- Aquí van entrando los productos al carrito -->
+        </div>
+      </div>
+    </div>
 
     <!-- FORMULARIOS DE INGRESO -->
     <div class="tabContainer active animate__animated animate__fadeInUp animate__slow" id="tabContainer">
 
       <div class="tab">
         <div class="headerTab">
-          <a href="#" class="btnCloseTab" id="btnCloseTab">
+          <a href="#" class="btn btnCloseTab" id="btnCloseTab">
             <i class="fa-solid fa-xmark icoClose" id="icoCloseTab"></i>
           </a>
           <ul class="options">
@@ -201,36 +212,9 @@
       </section>
 
       <!-- PRODUCTOS -->
-      <section class="mainProductos">
+      <section class="mainProductos" id="mainProductos">
 
-        <!-- REMERA GUNS -->
-        <div class="productosCard" id="remeGnr">
-          <div class="cardItems">
-            <img class="productoItem remera" src="assets/productos/remera/guns.png"
-              alt="Imagen de remera personalizada">
-
-            <!-- Valores -->
-            <div class="itemsProducto">
-              <h2 class="h2" id="producto">Reme GN´R</h2>
-              <div class="precioProducto">
-                <p class="itemDescription">$</p>
-                <p class="precioUnitario" id="precioUnitario">3500</p>
-              </div>
-              <div class="talle">
-                <p class="itemDescription">Talle: </p>
-                <select name="talle" id="talle">
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                  <option value="XXXL">XXXL</option>
-                </select>
-              </div>
-              <button class="btnAgregar" id="btnAgregar">Agregar</button>
-            </div>
-          </div>
-        </div>
+        <!-- AQUÍ VAN ENTRANDO LOS PRODUCTOS DEL STOCK QUE VOY APPENDEANDO DESDE JAVASCRIPT -->
 
       </section>
     </section>

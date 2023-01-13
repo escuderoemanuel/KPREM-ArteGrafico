@@ -4,5 +4,13 @@ html {
   body {
     width: 100%;
     background-color: black;
+
+    .btn {
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
   }
 }
