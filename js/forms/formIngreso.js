@@ -44,7 +44,7 @@ function formEntrar() {
     let emailConsultado = emailInputLogin.value;
     let passConsultada = passInputLogin.value;
     cuenta = buscarCuenta(emailConsultado);
-    if (cuenta != undefined && passConsultada == cuenta.pass) {
+    if (cuenta !== undefined && passConsultada === cuenta.pass) {
       alertLogin.innerHTML = "✅ Ingreso Exitoso";
       localStorage.setItem("emailStorage", cuenta.email);
       userText.innerHTML = localStorage.getItem("emailStorage");

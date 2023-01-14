@@ -1,5 +1,26 @@
 /* ============== JS DEL FORMULARIO ============== */
-let cuentas = [];
+let cuentas = [
+  {
+    name: "Emanuel",
+    lastname: "Escudero",
+    email: "emanuel@admin.com",
+    pass: "admin",
+    cel: "5492612061160",
+    termsConditions: true,
+  },
+];
+
+// Guarda el Array Cuentas en el LS
+const guardarCuentasLS = (cuentas) => {
+  localStorage.setItem("cuentas", JSON.stringify(cuentas));
+};
+guardarCuentasLS(cuentas);
+
+// Parsea el contenido de cuentas del LS
+const cargarCuentasLS = () => {
+  return JSON.parse(localStorage.getItem("cuentas")) || [];
+};
+
 /* Elementos Forms */
 let forms = document.querySelectorAll("form");
 
@@ -10,7 +31,6 @@ function formRegistro() {
   let emailInput = document.getElementById("emailInput");
   let passInput = document.getElementById("passInput");
   let celInput = document.getElementById("celInput");
-  //Hacer un check para los términos
   let alertRegister = document.getElementById("alertRegister");
 
   /* BOTÓN "REGISTRARME" */
@@ -91,5 +111,3 @@ function formRegistro() {
     }
   });
 }
-
-//formRegistro();
