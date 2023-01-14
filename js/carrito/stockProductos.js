@@ -11,7 +11,8 @@ stockRemeras.push(
     stockRemeras.length + 1,
     "Reme GN´R",
     "talle", // ARREGLAR ESTO!
-    3500,
+    5,
+    3650,
     "assets/productos/remera/guns.png"
   )
 );
@@ -20,6 +21,7 @@ stockRemeras.push(
     stockRemeras.length + 1,
     "Reme LedZep",
     "talle",
+    5,
     3500,
     "assets/productos/remera/ledzep.png"
   )
@@ -29,6 +31,7 @@ stockRemeras.push(
     stockRemeras.length + 1,
     "Reme Dignity",
     "talle",
+    5,
     3200,
     "assets/productos/remera/simpsons.png"
   )
@@ -38,7 +41,8 @@ stockRemeras.push(
     stockRemeras.length + 1,
     "Reme Hellfire",
     "talle",
-    3200,
+    5,
+    2900,
     "assets/productos/remera/hellfire.png"
   )
 );
@@ -47,7 +51,8 @@ stockRemeras.push(
     stockRemeras.length + 1,
     "Reme Pink Floyd",
     "talle",
-    3500,
+    5,
+    3590,
     "assets/productos/remera/pinkfloyd.png"
   )
 );
@@ -69,8 +74,8 @@ stockRemeras.forEach((producto) => {
   <option value="XXL"> XXL </option>
   </select>
   </div>
-  <p class="priceProduct">Precio: $ ${producto.precio}</p>
-  <button id="btnAgregar" class="btnAgregar" onClick="agregarAlCarrito(${producto.id})"  >Agregar<i class="fa-solid fa-cart-plus"></i></button> 
+  <p id="priceProduct">Precio: $ ${producto.precio}</p>
+  <button id="btnAgregar" class="btnAgregar" onClick="agregarAlCarrito(${producto.id})"  >Agregar <i class="fa-solid fa-cart-plus"></i></button> 
   `;
 
   //Appendeo cada "div" al elemento "mainProductos" del Document

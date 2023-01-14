@@ -1,8 +1,12 @@
 .mainCarrito {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transition: $transition;
+  transform: scale(0.2);
+  
 
   &.active {
-    display: block;
+    opacity: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -12,7 +16,8 @@
     height: 100vh;
     background-color: transparent;
     padding: 2rem;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);    
+    transform: scale(1);
   }
   
     .tablaCarrito {
@@ -22,8 +27,8 @@
       width: 90%;
       height: 90%;
       overflow: auto;
-      background-color: rgb(255, 255, 255, 0.8);
-      border-radius: $radius;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: $radiusMin;
       padding: 0.5rem;
       position: relative;
 
@@ -36,18 +41,43 @@
           top: 0;
           margin: 0.3rem 0.5rem;
         }
+
       }
 
       .tabla {
         width: 100%;
         margin-top: 1rem;
         justify-content: space-around;
+
+          #iconSumar, #iconRestar {
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            margin: 0, 0.5rem;
+            color: gray;
+
+            #i {
+              background-color: transparent;
+            }
+          }
+
+          .tituloCarrito {
+            color: #272727;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-bottom: solid 1.5px #272727;;
+          }
       }
       
     }
 
     .sumaTotal {
+      background-color: $color-blue;
       margin: $mp1;
+      padding: $mp05;
+      color: white;
+      font-weight: 400;
+      font-size: 1.1em;
     }
 
     .btnVaciarCarrito, .finalizarCompra {
