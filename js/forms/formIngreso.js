@@ -3,10 +3,11 @@ const userText = document.getElementById("userText");
 
 // Operador Termario: obtener el logIn del localStorage (Si hay alguno)
 emailStorage
-  ? ((userText.innerHTML = emailStorage),
+  ? ((userText.innerText = emailStorage),
     tabContainer.classList.remove("active"))
   : showForm();
 
+  
 /* ======= FORMULARIO INGRESO ======= */
 function formEntrar() {
   const emailInputLogin = document.getElementById("emailInputLogin");

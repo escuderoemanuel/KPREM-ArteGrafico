@@ -40,16 +40,22 @@ const buscarProducto = (id) => {
 
 // Agregar producto al Carrito
 const agregarAlCarrito = (id) => {
-  const productos = cargarStockRemerasLS();
+  const productos = cargarStockProductosLS();
   const productoCarrito = cargarProductosCarrito();
 
   if (buscarProducto(id)) {
-    let index = productoCarrito.findIndex((item) => item.id === id);
-    productoCarrito[index].cantidad += 1;
+    let index = productoCarrito.findIndex((item) => item.id === id); //Si el id está en el carrito que me devuelva su posición
+    if (productoCarrito[index].stock > 0) {
+      productoCarrito[index].stock -= 1;
+      productoCarrito[index].cantidad += 1;
+    }
   } else {
-    const producto = productos.find((item) => item.id === id);
-    producto.cantidad = 1;
-    productoCarrito.push(producto);
+    const producto = productos.find((item) => item.id === id); //Si el id no está en el carrito
+    if (producto.stock > 0) {
+      producto.cantidad = 1;
+      producto.stock -= 1;
+      productoCarrito.push(producto);
+    }
   }
   guardarProductosCarrito(productoCarrito);
   contadorBurbujaCarrito();
@@ -95,7 +101,6 @@ const cantidadProductosCarrito = () => {
 // Sumar Importe Carrito
 const sumarImporteCarrito = () => {
   const productoCarrito = cargarProductosCarrito();
-  console.log(productoCarrito);
   return productoCarrito.reduce(
     (total, item) => (total += item.cantidad * item.precio),
     0
@@ -105,22 +110,51 @@ const sumarImporteCarrito = () => {
 // Actualiza el número de productos que muestra la burbuja del Carrito
 const contadorBurbujaCarrito = () => {
   let salida = `
-      <img class="carritoIcon" src="assets/icon/carrito.png"
-      alt="Imagen de carrito" />
-      <span class="cantidadProductosCarritoIcon" id="cantidadProductosCarritoIcon">${cantidadProductosCarrito()}</span>
+    <i class="carritoIcon fa-solid fa-cart-shopping">
+    <span class="cantidadProductosCarritoIcon" id="cantidadProductosCarritoIcon">${cantidadProductosCarrito()}</span>
+    </i>
+    
   `;
   btnCarrito.innerHTML = salida;
 };
 contadorBurbujaCarrito();
 
+// Funciones Botones + y -
+function sumarCantidad(id) {
+  const productoCarrito = cargarProductosCarrito();
+  let index = productoCarrito.findIndex((item) => item.id === id);
+
+  if (productoCarrito[index].stock > 0) {
+    productoCarrito[index].cantidad++;
+    productoCarrito[index].stock--;
+    console.log(productoCarrito[index].stock);
+  }
+  guardarProductosCarrito(productoCarrito);
+  contadorBurbujaCarrito();
+  mostrarCarrito();
+}
+
+function restarCantidad(id) {
+  const productoCarrito = cargarProductosCarrito();
+  let index = productoCarrito.findIndex((item) => item.id === id);
+  if (productoCarrito[index].cantidad > 1) {
+    productoCarrito[index].cantidad -= 1;
+    productoCarrito[index].stock++;
+    console.log(productoCarrito[index].stock);
+  }
+  guardarProductosCarrito(productoCarrito);
+  contadorBurbujaCarrito();
+  mostrarCarrito();
+}
+
 // Agregar al Carrito
 const mostrarCarrito = () => {
   const productoCarrito = cargarProductosCarrito();
-  console.log(productoCarrito);
   let salida = " ";
 
   if (cantidadProductosCarrito() === 0) {
     mainCarrito.classList.remove("active");
+
     Swal.fire({
       icon: "error",
       background: "rgba(255, 255, 255, 0.9)",
@@ -137,18 +171,17 @@ const mostrarCarrito = () => {
       salida += `
     <tr>
     <td>
-    <img width="24" src=${producto.img} alt=${producto.nombre}>
+    <img class="imgItemCarrito" width="24" src=${producto.img} alt=${producto.nombre}>
     </td>
     <td>${producto.nombre}</td>
     
-    
     <td>
     <button id="iconRestar"><i onClick="restarCantidad(${
-      producto.cantidad
+      producto.id
     })" class=" fa-solid fa-minus"></i></button>
     ${producto.cantidad}
     <button id="iconSumar"><i onClick="sumarCantidad(${
-      producto.cantidad
+      producto.id
     })" class="fa-solid fa-plus"></i></button>
     </td>
     

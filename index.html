@@ -24,19 +24,20 @@
 
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/0752328cab.js" crossorigin="anonymous"></script>
-<!-- SWEETALERT -->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- SWEETALERT -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
   <!-- CSS STYLE -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- JS SCRIPT -->
+  <script src="js/main/main.js" defer></script>
   <script src="js/forms/formsInsertados.js" defer></script>
-  <script src="js/forms/formTabs.js" defer></script>
-  <script src="js/forms/cuentaClass.js" defer></script>
   <script src="js/forms/formRegistro.js" defer></script>
+  <script src="js/forms/formTabs.js" defer></script>
   <script src="js/forms/formIngreso.js" defer></script>
+  <script src="js/forms/cuentaClass.js" defer></script>
   <script src="js/carrito/productoClass.js" defer></script>
   <script src="js/carrito/stockProductos.js" defer></script>
   <script src="js/carrito/itemClass.js" defer></script>
@@ -57,7 +58,7 @@
 
       <!-- LOGO -->
       <h1 class="h1">
-        <img class="headerLogo" data-aos="fade-right" data-aos-duration="1500" src="assets/img/logo2022.png"
+        <img class="headerLogo" data-aos="fade-right" data-aos-duration="1500" src="assets/img/logo.png"
           alt="logo de KPREM Arte Gráfico" />
       </h1>
 
@@ -67,7 +68,8 @@
           <a class="btnCarrito" href="#" id="btnCarrito">
             <!-- Aquí dentro queda el carritoIcon y el cantidadProductosCarritoIcon -->
           </a>
-          <p class="userText" id="userText">Invitado</p>
+          <p id="userText" class="userText">
+          </p>
         </nav>
 
       </section>
@@ -75,9 +77,9 @@
   </header>
 
   <!-- MAIN -->
-  <main class="main">
-    <div  class="mainCarrito" id="mainCarrito">
-      <div  class="tablaCarrito" id="tablaCarrito">
+  <main class=" main">
+    <div class="mainCarrito" id="mainCarrito">
+      <div class="tablaCarrito" id="tablaCarrito">
         <div class="headerCarrito">
           <i class="btn fa-solid fa-xmark icoClose" id="icoClose"></i>
         </div>
@@ -90,22 +92,13 @@
     <!-- FORMULARIOS DE INGRESO -->
     <div class="tabContainer active animate__animated animate__fadeInUp animate__slow" id="tabContainer">
 
-      
+
     </div>
     <section class="containerMain" data-aos="fade-up" data-aos-duration="3000">
 
       <!-- TEXT INTRO -->
-      <section class="mainText">
-        <p>
-          En <em class="emBold">KPREM Arte Gráfico</em> nos dedicamos a la personalización de diferentes productos,
-          mediante
-          técnicas de estampación, como lo son la sublimación, serigrafía y
-          vinilo.
-        </p>
-        <p>
-          Te invitamos a conocer nuestra tienda y elegir el producto que
-          gustes, con el diseño que siempre quisiste!
-        </p>
+      <section class="mainText" id="mainText">
+        <!-- Va el innerHTML de main.js -->
       </section>
 
       <!-- PRODUCTOS -->

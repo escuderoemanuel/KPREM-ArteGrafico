@@ -3,7 +3,6 @@
   opacity: 0;
   transition: $transition;
   transform: scale(0.2);
-  
 
   &.active {
     opacity: 1;
@@ -14,102 +13,119 @@
     z-index: 1;
     width: 100vw;
     height: 100vh;
+    padding: 2%;
     background-color: transparent;
-    padding: 2rem;
-    backdrop-filter: blur(3px);    
     transform: scale(1);
+
+    @media screen and (min-width: 600px) {
+      padding: 2% 10%;
+    }
   }
-  
-    .tablaCarrito {
+
+  .tablaCarrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: $radiusMin;
+    padding: 0.2rem;
+    position: relative;
+    backdrop-filter: blur(15px);
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-blue;
+      border-radius: 50px;
+    }
+
+    @media screen and (min-width: 600px) {
+      font-size: 1em;
+      padding: 1.5rem;
+    }
+
+    .headerCarrito {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      height: 90%;
-      overflow: auto;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: $radiusMin;
-      padding: 0.5rem;
-      position: relative;
 
-      .headerCarrito {
-        display: flex;
-
-        .icoClose {
-          position: absolute;
-          right: 0;
-          top: 0;
-          margin: 0.3rem 0.5rem;
-        }
-
+      .icoClose {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0.3rem 0.5rem;
       }
-
-      .tabla {
-        width: 100%;
-        margin-top: 1rem;
-        justify-content: space-around;
-
-          #iconSumar, #iconRestar {
-            background-color: transparent;
-            cursor: pointer;
-            border: none;
-            margin: 0, 0.5rem;
-            color: gray;
-
-            #i {
-              background-color: transparent;
-            }
-          }
-
-          .tituloCarrito {
-            color: #272727;
-            font-size: 1.2em;
-            font-weight: 500;
-            border-bottom: solid 1.5px #272727;;
-          }
-      }
-      
     }
 
-    .sumaTotal {
-      background-color: $color-blue;
-      margin: $mp1;
-      padding: $mp05;
-      color: white;
-      font-weight: 400;
-      font-size: 1.1em;
-    }
-
-    .btnVaciarCarrito, .finalizarCompra {
-      margin: $mp05;
-      background-color: $color-danger;
-      color: white;
-      border-radius: 5px;
-      border: none;
+    .tabla {
+      width: 100%;
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      justify-content: space-between;
-      cursor: pointer;
+      justify-content: space-around;
 
-      &:hover {
-        scale: 1.05;
-        transform: $transition;
+      #iconSumar,
+      #iconRestar {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        margin: 0, 0.2rem;
+        color: gray;
+
+        #i {
+          background-color: transparent;
+        }
       }
-    }
 
-    .finalizarCompra {
-      background-color: $color-blue;
-    }
-
-    .alerta {
-      padding: 2rem;
-      border-radius: $radius;
-      color: gray;
-      font-weight: 500;
-      font-style: italic;
-      
-      .carritoVacio {
-        width: 64px;
+      .tituloCarrito {
+        color: #272727;
+        font-size: 1.2em;
+        font-weight: 500;
+        border-bottom: solid 1.5px #272727;
       }
     }
   }
+
+  .imgItemCarrito {
+    height: 64px;
+    width: auto;
+
+    @media screen and (min-width: 600px) {
+      width: 72px;
+      height: auto;
+    }
+  }
+
+  .sumaTotal {
+    background-color: $color-blue;
+    margin: $mp1;
+    padding: $mp05;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+
+  .btnVaciarCarrito,
+  .finalizarCompra {
+    margin: $mp05;
+    background-color: $color-danger;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.05;
+      transform: $transition;
+    }
+  }
+
+  .finalizarCompra {
+    background-color: $color-blue;
+  }
+}
