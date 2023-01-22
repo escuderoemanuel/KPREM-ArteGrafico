@@ -1,5 +1,5 @@
 /* ============== JS DEL TAB (PESTAÑAS) ============== */
-const showForm = function () {
+function showForm() {
   const option1 = document.getElementById("option1");
   const option2 = document.getElementById("option2");
   const content1 = document.getElementById("content1");
@@ -45,4 +45,4 @@ const showForm = function () {
 
   formRegistro();
   formEntrar();
-};
+}

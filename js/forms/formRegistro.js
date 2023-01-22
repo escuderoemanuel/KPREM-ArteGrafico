@@ -107,7 +107,7 @@ function formRegistro() {
     if (validation()) {
       crearCuenta();
       limpiarForms();
-      setTimeout(changeTab, 2000);
+      setTimeout(changeTab, 1000);
     }
   });
 }
