@@ -78,19 +78,23 @@ const vaciarCarrito = () => {
 };
 
 // Finalizar Compra
-const finalizarCompra = () => {
+function finalizarCompra() {
   localStorage.removeItem("carrito");
   contadorBurbujaCarrito();
-  mostrarCarrito();
   mainCarrito.classList.remove("active");
+
   Swal.fire({
-    icon: "success",
-    background: "rgba(255, 255, 255, 0.95)",
-    title: "¡Felicitaciones!",
-    text: "¡Tu compra fue procesada exitosamente!",
-    confirmButtonColor: "rgba(48, 133, 214, 1)",
+    html: "<br><h3>¡Gracias por tu compra!</h3> <br><br> <p>Esperamos verte pronto!</p>",
+    showClass: {
+      popup: "animate__animated animate__fadeInDown",
+    },
+    hideClass: {
+      popup: "animate__animated animate__fadeOutUp",
+    },
+    confirmButtonColor: "rgba(0, 121, 255, 1)",
+    confirmButtonText: "Entendido!",
   });
-};
+}
 
 // Cantidad de Productos en el Carrito
 const cantidadProductosCarrito = () => {
@@ -171,7 +175,9 @@ const mostrarCarrito = () => {
       salida += `
     <tr>
     <td>
-    <img class="imgItemCarrito" width="24" src=${producto.img} alt=${producto.nombre}>
+    <img class="imgItemCarrito" width="24" src=${producto.img} alt=${
+        producto.nombre
+      }>
     </td>
     <td>${producto.nombre}</td>
     
