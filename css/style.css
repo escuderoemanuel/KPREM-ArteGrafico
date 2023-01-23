@@ -19,6 +19,13 @@ html body {
   width: 100%;
   background-color: black;
 }
+html body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1px;
+}
 html body .btn {
   cursor: pointer;
 }
@@ -94,6 +101,8 @@ html body .btn:hover {
   height: 50px;
 }
 .tabContainer .btnCloseTab {
+  border: none;
+  background-color: transparent;
   position: absolute;
   right: 0;
   top: 0;
@@ -224,6 +233,8 @@ html body .btn:hover {
 .header .headerContainer .navBar .btnCarrito {
   display: flex;
   text-decoration: none;
+  background-color: transparent;
+  border: none;
 }
 .header .headerContainer .navBar .btnCarrito .carritoIcon {
   font-size: 24px;

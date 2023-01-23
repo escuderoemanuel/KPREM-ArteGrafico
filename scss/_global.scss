@@ -5,6 +5,15 @@ html {
     width: 100%;
     background-color: black;
 
+    &::-webkit-scrollbar {
+      width: 0.7rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-whiteTransparent;
+      border-radius: 1px;
+    }
+
     .btn {
       cursor: pointer;
 

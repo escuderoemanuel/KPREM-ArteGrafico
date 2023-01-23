@@ -131,7 +131,6 @@ function sumarCantidad(id) {
   if (productoCarrito[index].stock > 0) {
     productoCarrito[index].cantidad++;
     productoCarrito[index].stock--;
-    console.log(productoCarrito[index].stock);
   }
   guardarProductosCarrito(productoCarrito);
   contadorBurbujaCarrito();
@@ -144,7 +143,6 @@ function restarCantidad(id) {
   if (productoCarrito[index].cantidad > 1) {
     productoCarrito[index].cantidad -= 1;
     productoCarrito[index].stock++;
-    console.log(productoCarrito[index].stock);
   }
   guardarProductosCarrito(productoCarrito);
   contadorBurbujaCarrito();

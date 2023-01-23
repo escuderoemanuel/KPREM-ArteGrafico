@@ -4,9 +4,9 @@ const tabContainer = document.getElementById("tabContainer");
 tabContainer.innerHTML = `
 <div class="tab">
         <div class="headerTab">
-          <a href="#" class="btn btnCloseTab" id="btnCloseTab">
+          <button class="btn btnCloseTab" id="btnCloseTab">
             <i class="fa-solid fa-xmark icoClose" id="icoCloseTab"></i>
-          </a>
+          </button>
           <ul class="options">
             <li class="option optionActive" id="option1">Registrarse</li>
             <li class="option " id="option2">Ingresar</li>
