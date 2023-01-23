@@ -7,21 +7,26 @@ $color-blue: rgba(0, 121, 255, 1);
 $color-green: rgba(173, 255, 47, 1);
 $color-greenStrong: rgb(0, 255, 0);
 $color-danger: rgba(255, 0, 0, 0.8);
-$colorbgSweetAlert :rgba(255, 255, 255, 0.9);
+$colorbgSweetAlert: rgba(255, 255, 255, 0.9);
+$color-whiteTransparent: rgba(255, 255, 255, 0.4);
 
 /* FONTS */
 $font: "Ubuntu", "Lato", sans-serif;
 
 /* TRANSFORM HOVERS BTNS */
 $transform1: scale(1.05);
+$transform2: scale(1.06) rotate(-3deg);
+$transform3: scale(0.95);
 
 /* TRANSITIONS */
 $transition: all 200ms ease;
+$transition2: all 500ms ease;
 
 /* SHADOWS */
 $shadow1: 0px 1px 0px 1px rgba(0, 0, 0, 0.8);
 $shadow2: 3px 5px 10px rgba(0, 0, 0, 0.8);
 $shadow3: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
+$shadow4: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
 
 /* BORDERS */
 $borderWhite1: solid 1px white;
@@ -34,5 +39,7 @@ $radius: 15px;
 
 /* MARGINS */
 $mp02: 0.2rem;
+$mp03: 0.3rem;
+$mp04: 0.4rem;
 $mp05: 0.5rem;
 $mp1: 1rem;

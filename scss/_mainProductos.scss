@@ -1,8 +1,12 @@
 .mainProductos {
+  padding: 0rem 1rem;
+
   @media (min-width: 600px) {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    // justify-content: space-around;
   }
 
   .producto {
@@ -14,16 +18,14 @@
     );
     width: 280px;
     height: 300px;
-    margin: 2rem 0;
     padding: $mp1;
     border-radius: 25px;
     box-shadow: $shadow3;
     border: $borderWhite2;
     color: white;
     position: relative;
-    margin: $mp1 $mp02;
+    margin: $mp1 15px;
     align-items: center;
-    align-content: space-between;
 
     .productoImg {
       max-width: 250px;
@@ -34,16 +36,13 @@
       position: absolute;
       bottom: 10px;
 
-
-
-
       .nombreText {
         font-size: 1.3em;
         font-weight: 500;
         font-style: italic;
         margin-bottom: $mp02;
       }
-  
+
       .precioText {
         margin-top: $mp02;
       }

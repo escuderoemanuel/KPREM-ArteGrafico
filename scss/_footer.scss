@@ -1,5 +1,5 @@
 .footer {
-  font-size: .9rem;
+  font-size: 0.9rem;
   background-color: black;
   text-align: center;
   color: gray;
@@ -31,6 +31,11 @@
     .devImg {
       margin: 0.5rem;
       width: 40px;
+
+      &:hover {
+        transform: $transform1;
+        transition: $transition;
+      }
     }
   }
 }

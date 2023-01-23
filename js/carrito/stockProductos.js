@@ -1,11 +1,11 @@
 // Main - Cuerpo del sitio
 let mainProductos = document.getElementById("mainProductos");
 
-// Precios de Productos
+//Precios Predefinidos
+const precioTaza = 3200;
 const precioGorra = 2650;
 const precioGorro = 1750;
 const precioJarro = 2120;
-const precioTaza = 3200;
 
 // Stock de productos
 let stockProductos = [
@@ -30,145 +30,98 @@ let stockProductos = [
     precio: precioTaza,
     img: "assets/productos/tazas/tazaUmbrellaA.png",
   },
+  {
+    id: 4,
+    nombre: "Gorra Hendrix",
+    stock: 2,
+    precio: precioGorra,
+    img: "assets/productos/gorras/gorraHendrix.png",
+  },
+  {
+    id: 5,
+    nombre: "Gorra RHCP",
+    stock: 2,
+    precio: precioGorra,
+    img: "assets/productos/gorras/gorraOff.png",
+  },
+  {
+    id: 6,
+    nombre: "Gorra Pacman",
+    stock: 2,
+    precio: precioGorra,
+    img: "assets/productos/gorras/gorraPacman.png",
+  },
+  {
+    id: 7,
+    nombre: "Gorra Punisher",
+    stock: 2,
+    precio: precioGorra,
+    img: "assets/productos/gorras/gorraPunisher.png",
+  },
+  {
+    id: 8,
+    nombre: "Gorra AC DC",
+    stock: 2,
+    precio: precioGorra,
+    img: "assets/productos/gorros/gorroAcDc.png",
+  },
+  {
+    id: 9,
+    nombre: "Gorro Argentina",
+    stock: 2,
+    precio: precioGorro,
+    img: "assets/productos/gorros/gorroArgentina.png",
+  },
+  {
+    id: 10,
+    nombre: "Gorro Guns'n Roses",
+    stock: 2,
+    precio: precioGorro,
+    img: "assets/productos/gorros/gorroGuns.png",
+  },
+  {
+    id: 11,
+    nombre: "Gorro Nirvana",
+    stock: 2,
+    precio: precioGorro,
+    img: "assets/productos/gorros/gorroNirvana.png",
+  },
+  {
+    id: 12,
+    nombre: "Gorro River Plate",
+    stock: 2,
+    precio: precioGorro,
+    img: "assets/productos/gorros/gorroRiver.png",
+  },
+  {
+    id: 13,
+    nombre: "Gorro Running",
+    stock: 2,
+    precio: precioGorro,
+    img: "assets/productos/gorros/gorroRunning.png",
+  },
+  {
+    id: 14,
+    nombre: "Jarro Buenos Días",
+    stock: 3,
+    precio: precioJarro,
+    img: "assets/productos/jarros/jarroBuenosDias.png",
+  },
+  {
+    id: 15,
+    nombre: "Jarro Café",
+    stock: 2,
+    precio: precioJarro,
+    img: "assets/productos/jarros/jarroCafe.png",
+  },
+  {
+    id: 16,
+    nombre: "Jarro First Coffee",
+    stock: 1,
+    precio: precioJarro,
+    img: "assets/productos/jarros/jarroFirstCoffee.png",
+  },
 ];
-
-// Voy creando productos de clase Producto y pusheando directamente al arra stockProductos[]
-// Podría ponerlos directamente dentor del array stockProductos. Esto es para utilizar el pusheo también.
-//Tener en cuenta que las rutas deben ser como si estuviera parado en el index.html
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorra Hendrix",
-    5,
-    precioGorra,
-    "assets/productos/gorras/gorraHendrix.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorra RHCP",
-    5,
-    precioGorra,
-    "assets/productos/gorras/gorraOff.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorra Pacman",
-    5,
-    precioGorra,
-    "assets/productos/gorras/gorraPacman.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorra Punisher",
-    5,
-    precioGorra,
-    "assets/productos/gorras/gorraPunisher.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro AC DC",
-    4,
-    precioGorro,
-    "assets/productos/gorros/gorroAcDc.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro Argentina",
-    4,
-    precioGorro,
-    "assets/productos/gorros/gorroArgentina.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro Guns",
-    3,
-    precioGorro,
-    "assets/productos/gorros/gorroGuns.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro Nirvana",
-    3,
-    precioGorro,
-    "assets/productos/gorros/gorroNirvana.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro River",
-    5,
-    precioGorro,
-    "assets/productos/gorros/gorroRiver.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Gorro Running",
-    4,
-    precioGorro,
-    "assets/productos/gorros/gorroRunning.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Jarro Buenos Días",
-    2,
-    precioJarro,
-    "assets/productos/jarros/jarroBuenosDias.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Jarro Café",
-    3,
-    precioJarro,
-    "assets/productos/jarros/jarroCafe.png"
-  )
-);
-stockProductos.push(
-  new Producto(
-    stockProductos.length + 1,
-    "Jarro First Coffee",
-    1,
-    precioJarro,
-    "assets/productos/jarros/jarroFirstCoffee.png"
-  )
-);
-
-//Por cada elemento pusheado al array "stock", crea un div y le inserta sus elementos HTML correspondientes
-stockProductos.forEach((producto) => {
-  let div = document.createElement("div");
-  div.classList.add("producto");
-  div.innerHTML = `
-  <img class="productoItem productoImg" src=${producto.img} alt= "Foto Producto">
-  <div class="textContent">
-  <h2 class="nombreText">${producto.nombre}</h2>
-  <p class="precioText" id="priceProduct">Precio: $ ${producto.precio}</p>
-  </div>
-  <button id="btnAgregar" class="btnAgregar" onClick="agregarAlCarrito(${producto.id})"  >Agregar <i class="fa-solid fa-cart-plus"></i></button> 
-  `;
-
-  //Appendeo cada "div" al elemento "mainProductos" del Document
-  mainProductos.append(div);
-});
 
 // Guarda el Array stockProductos en el LS
 const guardarStockProductosLS = (stockProductos) => {
@@ -181,3 +134,26 @@ const cargarStockProductosLS = () => {
 };
 
 guardarStockProductosLS(stockProductos);
+
+//Lee el JSON con el stock y lo renderiza para mostrarlo en el main
+async function mostrarStock() {
+  const response = await fetch("js/carrito/stockProductos.json");
+  const data = await response.json();
+
+  data.forEach((producto) => {
+    let div = document.createElement("div");
+    div.className = "producto";
+    div.innerHTML = `
+    <img class="productoItem productoImg" src=${producto.img} alt= "Foto Producto">
+    <div class="textContent">
+    <h2 class="nombreText">${producto.nombre}</h2>
+    <p class="precioText" id="priceProduct">Precio: $ ${producto.precio}</p>
+    </div>
+    <button id="btnAgregar" class="btnAgregar" onClick="agregarAlCarrito(${producto.id})"  >Agregar <i class="fa-solid fa-cart-plus"></i></button> 
+    `;
+    //Appendeo cada "div" al elemento "mainProductos" del Document
+    mainProductos.append(div);
+  });
+}
+
+mostrarStock();

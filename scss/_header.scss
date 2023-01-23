@@ -1,12 +1,15 @@
 .header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   .headerContainer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0.5rem;
+    padding: $mp02;
 
     .headerLogo {
       max-width: 150px;
@@ -45,7 +48,7 @@
         }
 
         &:hover {
-          transform: scale(1.06) rotate(-3deg);
+          transform: $transform2;
           transition: $transition;
         }
       }
@@ -60,6 +63,7 @@
         font-size: 0.8em;
         text-align: center;
         color: gray;
+        border: 0;
 
         &:hover {
           transform: $transform1;

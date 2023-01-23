@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "nombre": "Taza Animales",
+    "stock": 2,
+    "precio": 3200,
+    "img": "assets/productos/tazas/tazaAnimales.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Taza Harry Potter",
+    "stock": 3,
+    "precio": 3200,
+    "img": "assets/productos/tazas/tazaPotter.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Taza Umbrella Academy",
+    "stock": 3,
+    "precio": 3200,
+    "img": "assets/productos/tazas/tazaUmbrellaA.png"
+  },
+{
+    "id": 4,
+    "nombre": "Gorra Hendrix",
+    "stock": 2,
+    "precio": 2650,
+    "img": "assets/productos/gorras/gorraHendrix.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Gorra RHCP",
+    "stock": 2,
+    "precio": 2650,
+    "img": "assets/productos/gorras/gorraOff.png"
+  },
+    {
+    "id": 6,
+    "nombre": "Gorra Pacman",
+    "stock": 2,
+    "precio": 2650,
+    "img": "assets/productos/gorras/gorraPacman.png"
+  },
+    {
+    "id": 7,
+    "nombre": "Gorra Punisher",
+    "stock": 2,
+    "precio": 2650,
+    "img": "assets/productos/gorras/gorraPunisher.png"
+  },
+    {
+    "id": 8,
+    "nombre": "Gorra AC DC",
+    "stock": 2,
+    "precio": 2650,
+    "img": "assets/productos/gorros/gorroAcDc.png"
+  },
+    {
+    "id": 9,
+    "nombre": "Gorro Argentina",
+    "stock": 2,
+    "precio": 1750,
+    "img": "assets/productos/gorros/gorroArgentina.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Gorro Guns'n Roses",
+    "stock": 2,
+    "precio": 1750,
+    "img": "assets/productos/gorros/gorroGuns.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Gorro Nirvana",
+    "stock": 2,
+    "precio": 1750,
+    "img": "assets/productos/gorros/gorroNirvana.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Gorro River Plate",
+    "stock": 2,
+    "precio": 1750,
+    "img": "assets/productos/gorros/gorroRiver.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Gorro Running",
+    "stock": 2,
+    "precio": 1750,
+    "img": "assets/productos/gorros/gorroRunning.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Jarro Buenos Días",
+    "stock": 3,
+    "precio": 2120,
+    "img": "assets/productos/jarros/jarroBuenosDias.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Jarro Café",
+    "stock": 2,
+    "precio": 2120,
+    "img": "assets/productos/jarros/jarroCafe.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Jarro First Coffee",
+    "stock": 1,
+    "precio": 2120,
+    "img": "assets/productos/jarros/jarroFirstCoffee.png"
+  }
+]
