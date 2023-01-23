@@ -1,7 +1,7 @@
 let footer = document.getElementById("footer");
 
 footer.innerHTML = `
-<div data-aos="fade-in" data-aos-duration="1000">
+<div>
       <section class="footerKprem">
         <a href="https://www.instagram.com/kprem_artegrafico/?hl=es-la" rel="noopener noreferrer" target="_blank">
           <img class="footerIcon" src="assets/icon/insta.png" alt="Enlace al Instagram de KPREM Arte Gráfico" />

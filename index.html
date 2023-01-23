@@ -40,14 +40,12 @@
   <!-- CSS STYLE -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- AOS ANIMATION -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- ANIMATE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body class="body">
+<body class="body animate__animated animate__fadeIn animate__slow">
 
   <!-- HEADER -->
   <header class="header">
@@ -55,12 +53,11 @@
 
       <!-- LOGO -->
       <!-- <h1 class="h1"> -->
-      <img class="headerLogo" data-aos="fade-right" data-aos-duration="1500" src="assets/img/logo.png"
-        alt="logo de KPREM Arte Gráfico" />
+      <img class="headerLogo" src="assets/img/logo.png" alt="logo de KPREM Arte Gráfico" />
       <!-- </h1> -->
 
       <!-- MENU -->
-      <section class="headerMenu" data-aos="fade-left" data-aos-duration="1500">
+      <section class="headerMenu">
         <nav class="navBar">
           <button class="btnCarrito" id="btnCarrito">
             <!-- Aquí dentro queda el carritoIcon y el cantidadProductosCarritoIcon -->
@@ -90,7 +87,7 @@
 
 
     </div>
-    <section class="containerMain" data-aos="fade-up" data-aos-duration="3000">
+    <section class="containerMain">
 
       <!-- TEXT INTRO -->
       <section class="mainText" id="mainText">
@@ -112,14 +109,6 @@
   <!-- FOOTER -->
   <footer class="footer" id="footer">
   </footer>
-
-
-
-  <!-- ANIMATIONS AOS NPM-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
   <script src="js/main/main.js"></script>
   <script src="js/forms/formsInsertados.js"></script>
