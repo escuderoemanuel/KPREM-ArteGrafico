@@ -16,7 +16,7 @@ let main = document.getElementById("main");
 let wtpFixed = document.createElement("a");
 wtpFixed.innerHTML = `
 <a href="https://wa.me/5492616410893" target="_blank">
-  <img src="../../assets/icon/wtsp.png" class="wtpFixed" alt="Ícono de acceso al whatsapp de la tienda">
+  <img src="./assets/icon/wtsp.png" class="wtpFixed" alt="Ícono de acceso al whatsapp de la tienda">
 </a>
 </div>
 `;

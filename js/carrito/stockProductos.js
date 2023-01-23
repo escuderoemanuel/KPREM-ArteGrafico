@@ -137,7 +137,7 @@ guardarStockProductosLS(stockProductos);
 
 //Lee el JSON con el stock y lo renderiza para mostrarlo en el main
 async function mostrarStock() {
-  const response = await fetch("js/carrito/stockProductos.json");
+  const response = await fetch("./js/carrito/stockProductos.json");
   const data = await response.json();
 
   data.forEach((producto) => {
