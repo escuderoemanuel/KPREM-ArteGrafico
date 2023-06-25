@@ -1,4 +1,4 @@
-let footer = document.getElementById("footer");
+let footer = document.getElementById('footer');
 
 footer.innerHTML = `
 <div>
@@ -14,8 +14,8 @@ footer.innerHTML = `
         <section class="textFooter">
           <p>© 2022 | All Rights Reserved</p>
           <p>• Powered by Emanuel Escudero •</p>
-          <a href="https://escuderoemanuel.github.io/Portfolio/" rel="noopener noreferrer" target="_blank">
-            <img class="devImg" src="assets/dev/LogoSinBackground.png" alt="Developer Logotype" />
+          <a href="https://emanuelescudero.ar" rel="noopener noreferrer" target="_blank">
+            <img class="devImg" src="https://i.ibb.co/ZT13Snc/Logo2023.png" alt="Developer Logotype" />
           </a>
         </section>
       </section>
