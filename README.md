@@ -1,5 +1,8 @@
 <h1> KPREM Arte Gráfico </h1>
 
+![Project Poster](https://i.ibb.co/dprm1cR/kprem.jpg)
+
+
 <h4> Sobre el Proyecto </h4>
 
 <li> Project Name: Proyecto Curso Javascript CoderHouse </li>
