@@ -14,7 +14,7 @@ footer.innerHTML = `
         <section class="textFooter">
          <p>• Desarrollado por Emanuel Escudero •</p>
          <a href="https://emanuelescudero.ar" rel="noopener noreferrer" target="_blank">
-            <img class="devImg" src="https://i.ibb.co/ZT13Snc/Logo2023.png" alt="Developer Logotype" />
+            <img class="devImg" src="https://i.ibb.co/L5M5KFP/Logo2024.png" alt="Developer Logotype" />
           </a>
         </section>
       </section>
